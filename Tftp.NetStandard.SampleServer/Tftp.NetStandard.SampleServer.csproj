@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Tftp.NetStandard">
+      <HintPath>..\Tftp.NetStandard\bin\Release\netstandard2.0\Tftp.NetStandard.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

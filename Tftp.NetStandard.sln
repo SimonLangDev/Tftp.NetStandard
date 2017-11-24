@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tftp.NetStandard", "Tftp.NetStandard\Tftp.NetStandard.csproj", "{EA307BE8-938A-4B30-8C00-DC347E9C9261}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tftp.NetStandard.SampleClient", "Tftp.NetStandard.SampleClient\Tftp.NetStandard.SampleClient.csproj", "{92BDE304-D2D8-4D38-BE6F-59A19944B36F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tftp.NetStandard.SampleServer", "Tftp.NetStandard.SampleServer\Tftp.NetStandard.SampleServer.csproj", "{C224EB9D-DFA2-4847-9214-13FCFFFFE93A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA307BE8-938A-4B30-8C00-DC347E9C9261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA307BE8-938A-4B30-8C00-DC347E9C9261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA307BE8-938A-4B30-8C00-DC347E9C9261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA307BE8-938A-4B30-8C00-DC347E9C9261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92BDE304-D2D8-4D38-BE6F-59A19944B36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92BDE304-D2D8-4D38-BE6F-59A19944B36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92BDE304-D2D8-4D38-BE6F-59A19944B36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92BDE304-D2D8-4D38-BE6F-59A19944B36F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C224EB9D-DFA2-4847-9214-13FCFFFFE93A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C224EB9D-DFA2-4847-9214-13FCFFFFE93A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C224EB9D-DFA2-4847-9214-13FCFFFFE93A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C224EB9D-DFA2-4847-9214-13FCFFFFE93A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {448CAFAF-8AA6-4C92-A8E9-102087088CF4}
+	EndGlobalSection
+EndGlobal

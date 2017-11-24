@@ -1,0 +1,13 @@
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\bin\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.deps.json
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\bin\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.runtimeconfig.json
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\bin\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.runtimeconfig.dev.json
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\bin\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.dll
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\bin\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.pdb
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\bin\Debug\netcoreapp2.0\Tftp.NetStandard.dll
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\bin\Debug\netcoreapp2.0\Tftp.NetStandard.pdb
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\obj\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.csprojResolveAssemblyReference.cache
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\obj\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.csproj.CoreCompileInputs.cache
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\obj\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.AssemblyInfoInputs.cache
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\obj\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.AssemblyInfo.cs
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\obj\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.dll
+c:\users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard.SampleClient\obj\Debug\netcoreapp2.0\Tftp.NetStandard.SampleClient.pdb
