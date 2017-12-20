@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Threading;
 
 namespace Tftp.NetStandard.SampleClient
@@ -14,15 +15,17 @@ namespace Tftp.NetStandard.SampleClient
             var client = new TftpClient("localhost");
 
             //Prepare a simple transfer (GET test.dat)
-            var transfer = client.Download("data.txt");
+            var transfer = client.Upload("data.txt");
 
             //Capture the events that may happen during the transfer
             transfer.OnProgress += new TftpProgressHandler(transfer_OnProgress);
             transfer.OnFinished += new TftpEventHandler(transfer_OnFinshed);
             transfer.OnError += new TftpErrorHandler(transfer_OnError);
 
+            string text = File.ReadAllText(Directory.GetCurrentDirectory() + "\\data.txt", Encoding.UTF8);
+
             //Start the transfer and write the data that we're downloading into a memory stream
-            Stream stream = new MemoryStream();
+            Stream stream = new MemoryStream(Encoding.ASCII.GetBytes(text));
             transfer.Start(stream);
 
             //Wait for the transfer to finish

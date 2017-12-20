@@ -46,6 +46,11 @@ namespace Tftp.NetStandard
         int BlockSize { get; set; }
 
         /// <summary>
+        /// Transfer blocksize. Set this member to control the TFTP blocksize option (RFC 2349).
+        /// </summary>
+        byte[] BlockData { get; set; }
+
+        /// <summary>
         /// Timeout after which commands are sent again.
         /// This member is also transmitted as the TFTP timeout interval option (RFC 2349).
         /// </summary>
@@ -65,6 +70,11 @@ namespace Tftp.NetStandard
         /// Filename for the transferred file.
         /// </summary>
         String Filename { get; }
+
+        /// <summary>
+        /// Data for the transferred file.
+        /// </summary>
+        byte[] Data { get; }
 
         /// <summary>
         /// You can set your own object here to associate custom data with this transfer.

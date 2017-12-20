@@ -25,7 +25,7 @@ namespace Tftp.NetStandard.Transfer.States
 
             //Notify our observers about our progress
             bytesSent += lastData.Length;
-            Context.RaiseOnProgress(bytesSent);
+            Context.RaiseOnProgress(bytesSent, lastData);
 
             if (lastPacketWasSent)
             {

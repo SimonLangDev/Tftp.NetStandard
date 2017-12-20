@@ -74,10 +74,10 @@ namespace Tftp.NetStandard.Transfer
             return connection;
         }
 
-        internal void RaiseOnProgress(int bytesTransferred)
+        internal void RaiseOnProgress(int bytesTransferred, byte[] bytesData)
         {
             if (OnProgress != null)
-                OnProgress(this, new TftpTransferProgress(bytesTransferred, ExpectedSize));
+                OnProgress(this, new TftpTransferProgress(bytesTransferred, bytesData, ExpectedSize));
         }
 
         internal void RaiseOnError(TftpTransferError error)
@@ -128,9 +128,11 @@ namespace Tftp.NetStandard.Transfer
         public event TftpErrorHandler OnError;
 
         public string Filename { get; private set; }
+        public byte[] Data { get; private set; }
         public int RetryCount { get; set; }
         public virtual TftpTransferMode TransferMode { get; set; }
         public object UserContext { get; set; }
+
         public virtual TimeSpan RetryTimeout 
         {
             get { return TimeSpan.FromSeconds(NegotiatedOptions != null ? NegotiatedOptions.Timeout : ProposedOptions.Timeout); }
@@ -147,6 +149,12 @@ namespace Tftp.NetStandard.Transfer
         {
             get { return NegotiatedOptions != null ? NegotiatedOptions.BlockSize : ProposedOptions.BlockSize; }
             set { ThrowExceptionIfTransferAlreadyStarted(); ProposedOptions.BlockSize = value; }
+        }
+
+        public virtual byte[] BlockData
+        {
+            get { return NegotiatedOptions != null ? NegotiatedOptions.BlockData : ProposedOptions.BlockData; }
+            set { ThrowExceptionIfTransferAlreadyStarted(); ProposedOptions.BlockData = value; }
         }
 
         private void ThrowExceptionIfTransferAlreadyStarted()

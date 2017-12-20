@@ -11,6 +11,9 @@ namespace Tftp.NetStandard.Transfer
         public bool IncludesBlockSizeOption = false;
         public int BlockSize = DEFAULT_BLOCKSIZE;
 
+        public bool IncludesBlockDataOption = false;
+        public byte[] BlockData = null;
+
         public bool IncludesTimeoutOption = false;
         public int Timeout = DEFAULT_TIMEOUT_SECS;
 
@@ -19,12 +22,12 @@ namespace Tftp.NetStandard.Transfer
 
         public static TransferOptionSet NewDefaultSet()
         {
-            return new TransferOptionSet() { IncludesBlockSizeOption = true, IncludesTimeoutOption = true, IncludesTransferSizeOption = true };
+            return new TransferOptionSet() { IncludesBlockSizeOption = true, IncludesBlockDataOption = true, IncludesTimeoutOption = true, IncludesTransferSizeOption = true };
         }
 
         public static TransferOptionSet NewEmptySet()
         {
-            return new TransferOptionSet() { IncludesBlockSizeOption = false, IncludesTimeoutOption = false, IncludesTransferSizeOption = false };
+            return new TransferOptionSet() { IncludesBlockSizeOption = false, IncludesBlockDataOption = false, IncludesTimeoutOption = false, IncludesTransferSizeOption = false };
         }
 
         private TransferOptionSet()
@@ -33,7 +36,7 @@ namespace Tftp.NetStandard.Transfer
 
         public TransferOptionSet(IEnumerable<TransferOption> options)
         {
-            IncludesBlockSizeOption = IncludesTimeoutOption = IncludesTransferSizeOption = false;
+            IncludesBlockSizeOption = IncludesBlockDataOption = IncludesTimeoutOption = IncludesTransferSizeOption = false;
 
             foreach (TransferOption option in options)
             {

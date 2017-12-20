@@ -6,9 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Tftp.NetStandard">
-      <HintPath>..\Tftp.NetStandard\bin\Release\netstandard2.0\Tftp.NetStandard.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Tftp.NetStandard\Tftp.NetStandard.csproj" />
   </ItemGroup>
 
 </Project>
