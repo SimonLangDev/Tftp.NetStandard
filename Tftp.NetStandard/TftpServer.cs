@@ -36,10 +36,27 @@ namespace Tftp.NetStandard
         /// </summary>
         private readonly ITransferChannel serverSocket;
 
+        /// <summary>
+        /// Timeout of the tftp server.
+        /// </summary>
+        private readonly int Timeout;
+
         public TftpServer(IPEndPoint localAddress)
         {
             if (localAddress == null)
                 throw new ArgumentNullException("localAddress");
+
+            serverSocket = TransferChannelFactory.CreateServer(localAddress);
+            serverSocket.OnCommandReceived += new TftpCommandHandler(serverSocket_OnCommandReceived);
+            serverSocket.OnError += new TftpChannelErrorHandler(serverSocket_OnError);
+        }
+
+        public TftpServer(IPEndPoint localAddress, TimeSpan timeout)
+        {
+            if (localAddress == null)
+                throw new ArgumentNullException("localAddress");
+
+            Timeout = (int) timeout.TotalMilliseconds;
 
             serverSocket = TransferChannelFactory.CreateServer(localAddress);
             serverSocket.OnCommandReceived += new TftpCommandHandler(serverSocket_OnCommandReceived);
@@ -63,6 +80,26 @@ namespace Tftp.NetStandard
 
         public TftpServer()
             : this(DEFAULT_SERVER_PORT)
+        {
+        }
+
+        public TftpServer(IPAddress localAddress, TimeSpan timeout)
+            : this(localAddress, DEFAULT_SERVER_PORT, timeout)
+        {
+        }
+
+        public TftpServer(IPAddress localAddress, int port, TimeSpan timeout)
+            : this(new IPEndPoint(localAddress, port), timeout)
+        {
+        }
+
+        public TftpServer(int port, TimeSpan timeout)
+            : this(new IPEndPoint(IPAddress.Any, port), timeout)
+        {
+        }
+
+        public TftpServer(TimeSpan timeout)
+            : this(DEFAULT_SERVER_PORT, timeout)
         {
         }
 
@@ -91,7 +128,12 @@ namespace Tftp.NetStandard
 
             //Create a wrapper for the transfer request
             ReadOrWriteRequest request = (ReadOrWriteRequest)command;
-            ITftpTransfer transfer = request is ReadRequest ? (ITftpTransfer)new LocalReadTransfer(channel, request.Filename, request.Options) : new LocalWriteTransfer(channel, request.Filename, request.Options);
+            ITftpTransfer transfer = null;
+
+            if (Timeout > 0)
+                transfer = request is ReadRequest ? (ITftpTransfer)new LocalReadTransfer(channel, request.Filename, request.Options, Timeout) : new LocalWriteTransfer(channel, request.Filename, request.Options, Timeout);
+            else
+                transfer = request is ReadRequest ? (ITftpTransfer)new LocalReadTransfer(channel, request.Filename, request.Options) : new LocalWriteTransfer(channel, request.Filename, request.Options);
 
             if (command is ReadRequest)
                 RaiseOnReadRequest(transfer, endpoint);

@@ -15,7 +15,7 @@ namespace Tftp.NetStandard.SampleClient
             var client = new TftpClient("localhost");
 
             //Prepare a simple transfer (GET test.dat)
-            var transfer = client.Upload("data.txt");
+            var transfer = client.Upload("data.txt", TimeSpan.FromSeconds(10));
 
             //Capture the events that may happen during the transfer
             transfer.OnProgress += new TftpProgressHandler(transfer_OnProgress);
