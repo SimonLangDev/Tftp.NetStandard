@@ -130,10 +130,7 @@ namespace Tftp.NetStandard
             ReadOrWriteRequest request = (ReadOrWriteRequest)command;
             ITftpTransfer transfer = null;
 
-            if (Timeout > 0)
-                transfer = request is ReadRequest ? (ITftpTransfer)new LocalReadTransfer(channel, request.Filename, request.Options, Timeout) : new LocalWriteTransfer(channel, request.Filename, request.Options, Timeout);
-            else
-                transfer = request is ReadRequest ? (ITftpTransfer)new LocalReadTransfer(channel, request.Filename, request.Options) : new LocalWriteTransfer(channel, request.Filename, request.Options);
+            transfer = request is ReadRequest ? (ITftpTransfer)new LocalReadTransfer(channel, request.Filename, request.Options) : new LocalWriteTransfer(channel, request.Filename, request.Options);
 
             if (command is ReadRequest)
                 RaiseOnReadRequest(transfer, endpoint);

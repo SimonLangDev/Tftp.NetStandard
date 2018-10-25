@@ -1,0 +1,8 @@
+C:\Users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard\obj\Debug\netstandard2.0\Tftp.NetStandard.csproj.CoreCompileInputs.cache
+C:\Users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard\obj\Debug\netstandard2.0\Tftp.NetStandard.AssemblyInfoInputs.cache
+C:\Users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard\obj\Debug\netstandard2.0\Tftp.NetStandard.AssemblyInfo.cs
+C:\Users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard\bin\Debug\netstandard2.0\Tftp.NetStandard.deps.json
+C:\Users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard\bin\Debug\netstandard2.0\Tftp.NetStandard.dll
+C:\Users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard\bin\Debug\netstandard2.0\Tftp.NetStandard.pdb
+C:\Users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard\obj\Debug\netstandard2.0\Tftp.NetStandard.dll
+C:\Users\delangsi\Source\Repos\Tftp.NetStandard\Tftp.NetStandard\obj\Debug\netstandard2.0\Tftp.NetStandard.pdb

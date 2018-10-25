@@ -52,11 +52,13 @@ namespace Tftp.NetStandard.Channel
             {
                 //Handle receive error
                 RaiseOnError(new NetworkError(e));
+                return;
             }
             catch (TftpParserException e2)
             {
                 //Handle parser error
                 RaiseOnError(new NetworkError(e2));
+                return;
             }
 
             if (command != null)
